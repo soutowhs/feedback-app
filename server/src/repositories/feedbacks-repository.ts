@@ -1,9 +1,11 @@
+import { type Feedback } from '@prisma/client'
+
 export interface FeedbackCreateData {
-    type: string;
-    comment: string;
-    screenshot?: string;
+  type: string
+  comment: string
+  screenshot?: string
 }
 
 export interface FeedbackRepository {
-    create: (data: FeedbackCreateData) => Promise<void>;
+  create: (data: FeedbackCreateData) => Promise<Feedback>
 }
